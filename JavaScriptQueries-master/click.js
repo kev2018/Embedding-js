@@ -1,19 +1,20 @@
-//declare samecolor() here
+
 function samecolor(){
     const doc = document.querySelectorAll("#samecolor div");
       for(let c =0;c<doc.length;c++){
         doc[c].style.backgroundColor = "#f00";
-      }
+        doc[c].style.opacity += 0.2*[c];
+    }
 }
-//declare diffcolor() here
+
 function diffcolor(){
-  const doc = document.querySelectorAll("diffcolor div");
-for(let k =0;k<doc.length;k++){
-  if([k]%2 == 1){
-      doc[k].style.backgroundColor = "#0f0";
+  const doc = document.querySelectorAll("#diffcolor div");
+    for(let c =0;c<doc.length;c++){
+    if([c]%2 == 1){
+        doc[c].style.backgroundColor = "#00f";
+        }
+        else{
+            doc[c].style.backgroundColor = "#0f0";
+        }
     }
-    else{
-      doc[k].style.backgroundColor = "#00f";
-    }
-  }
 }
